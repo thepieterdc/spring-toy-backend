@@ -14,6 +14,7 @@ import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.Locale;
 
 /**
  * User model.
@@ -47,7 +48,7 @@ public class User implements Identifiable<Long> {
 	 */
 	public User(final String email, final String firstName, final String lastName, final LocalDate birthday) {
 		this.birthday = birthday;
-		this.email = email;
+		this.setEmail(email);
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
@@ -107,5 +108,49 @@ public class User implements Identifiable<Long> {
 	 */
 	public String getLastName() {
 		return this.lastName;
+	}
+	
+	/**
+	 * Sets the birthday.
+	 *
+	 * @param nw the new birthday to set
+	 * @return fluent
+	 */
+	public User setBirthday(final LocalDate nw) {
+		this.birthday = nw;
+		return this;
+	}
+	
+	/**
+	 * Sets the email address.
+	 *
+	 * @param nw the new email address to set
+	 * @return fluent
+	 */
+	public User setEmail(final String nw) {
+		this.email = nw.toLowerCase(Locale.getDefault());
+		return this;
+	}
+	
+	/**
+	 * Sets the first name.
+	 *
+	 * @param nw the new first name to set
+	 * @return fluent
+	 */
+	public User setFirstName(final String nw) {
+		this.firstName = nw;
+		return this;
+	}
+	
+	/**
+	 * Sets the last name.
+	 *
+	 * @param nw the new last name to set
+	 * @return fluent
+	 */
+	public User setLastName(final String nw) {
+		this.lastName = nw;
+		return this;
 	}
 }

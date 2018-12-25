@@ -7,7 +7,7 @@
  */
 package io.github.thepieterdc.handler;
 
-import io.github.thepieterdc.UserNotFoundException;
+import io.github.thepieterdc.exception.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

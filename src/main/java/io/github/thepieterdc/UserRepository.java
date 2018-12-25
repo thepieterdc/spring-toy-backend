@@ -11,6 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * A repository for User entities.
@@ -23,4 +24,12 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	 * @return all users
 	 */
 	Collection<User> findAll();
+	
+	/**
+	 * Finds a user given an email address.
+	 *
+	 * @param email the email address to find
+	 * @return the user if any
+	 */
+	Optional<User> findByEmail(final String email);
 }

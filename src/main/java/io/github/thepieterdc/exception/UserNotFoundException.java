@@ -5,8 +5,11 @@
  *
  * https://github.com/thepieterdc/spring-toy-backend
  */
-package io.github.thepieterdc;
+package io.github.thepieterdc.exception;
 
+/**
+ * The requested user was not found.
+ */
 public final class UserNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = -34670051254168594L;
 	
