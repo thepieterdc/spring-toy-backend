@@ -209,16 +209,6 @@
                     }
                 }
             },
-            "Password": {
-                "type": "object",
-                "properties": {
-                    "password": {
-                        "format": "password",
-                        "type": "string",
-                        "writeOnly": true
-                    }
-                }
-            },
             "Url": {
                 "type": "object",
                 "properties": {
@@ -248,9 +238,6 @@
                     },
                     {
                         "$ref": "#/components/schemas/LastName"
-                    },
-                    {
-                        "$ref": "#/components/schemas/Password"
                     },
                     {
                         "$ref": "#/components/schemas/Url"

@@ -5,10 +5,10 @@ Toying example of a backend, written in Spring.
 Docs: https://thepieterdc.github.io/spring-toy-backend/
 
 ## Building
-`./gradlew assemble`
+`gradlew assemble`
 
 ## Testing
-`./gradlew test`
+`gradlew test`
 
 ## Running
-`./gradlew bootRun`
+`gradlew bootRun`
