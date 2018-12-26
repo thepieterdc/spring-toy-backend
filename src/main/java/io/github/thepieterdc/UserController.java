@@ -25,6 +25,7 @@ import static io.github.thepieterdc.UserController.ENDPOINT_USERS;
  * A controller for User entities.
  */
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = ENDPOINT_USERS, produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 	public static final String ENDPOINT_USERS = "/users";
